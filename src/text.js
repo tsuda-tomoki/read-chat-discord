@@ -16,5 +16,5 @@ export function formatMessageForSpeech(message) {
   if (!text && message.attachments.size) text = '添付ファイル';
   if (!text) return null;
   if (text.length > MAX_SPOKEN_LENGTH) text = `${text.slice(0, MAX_SPOKEN_LENGTH)}、以下省略`;
-  return `${message.author.displayName} さん。${text}`;
+  return `${text}`;
 }
